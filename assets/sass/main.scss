@@ -1,6 +1,42 @@
 @use "index";
+@use "agenda";
+@use "useful-info";
+@use "contact";
+@use "show-detail";
+@use "header";
+@use "footer";
+
+/* IMPORTS */
+@font-face {
+  font-family: "Abril";
+  src: url("../fonts/Abril_Fatface/AbrilFatface-Regular.ttf");
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+/* COLORS SETUP */
+:root {
+  --color-dark: #2a2d34;
+  --color-accent: #d4a843;
+  --color-light: #f5f0e8;
+  --color-primary: #6b1d3a;
+}
+
+/* OVERALL */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "DM Sans";
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--color-light);
 }
