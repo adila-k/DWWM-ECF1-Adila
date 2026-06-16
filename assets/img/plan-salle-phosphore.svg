@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="680" height="520">
+
+  <!-- Fond -->
+  <rect width="680" height="520" fill="#F5F0E8"/>
+
+  <!-- Contour salle -->
+  <rect x="80" y="30" width="520" height="460" rx="20" fill="#EDE8DF" stroke="#C5BFB5" stroke-width="1"/>
+
+  <!-- ── SCÈNE ── -->
+  <rect x="200" y="390" width="280" height="64" rx="8" fill="#6B1D3A"/>
+  <text font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#F5F0E8" text-anchor="middle" x="340" y="427" dominant-baseline="central">Scène</text>
+
+  <!-- ── RANGÉE A ── -->
+  <ellipse cx="340" cy="340" rx="130" ry="22" fill="none" stroke="#D4A843" stroke-width="1" opacity="0.6"/>
+  <circle cx="212" cy="340" r="5" fill="#D4A843"/><circle cx="232" cy="333" r="5" fill="#D4A843"/>
+  <circle cx="254" cy="327" r="5" fill="#D4A843"/><circle cx="276" cy="323" r="5" fill="#D4A843"/>
+  <circle cx="298" cy="321" r="5" fill="#D4A843"/><circle cx="320" cy="320" r="5" fill="#D4A843"/>
+  <circle cx="340" cy="319" r="5" fill="#D4A843"/><circle cx="360" cy="320" r="5" fill="#D4A843"/>
+  <circle cx="382" cy="321" r="5" fill="#D4A843"/><circle cx="404" cy="323" r="5" fill="#D4A843"/>
+  <circle cx="426" cy="327" r="5" fill="#D4A843"/><circle cx="448" cy="333" r="5" fill="#D4A843"/>
+  <circle cx="468" cy="340" r="5" fill="#D4A843"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle" x="92" y="343" dominant-baseline="central">A</text>
+
+  <!-- ── RANGÉE B ── -->
+  <ellipse cx="340" cy="305" rx="155" ry="24" fill="none" stroke="#C5BFB5" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="187" cy="306" r="4" fill="#9C9690" opacity="0.6"/><circle cx="208" cy="298" r="4" fill="#9C9690" opacity="0.6"/>
+  <circle cx="231" cy="291" r="4" fill="#9C9690" opacity="0.6"/><circle cx="254" cy="286" r="4" fill="#9C9690" opacity="0.6"/>
+  <circle cx="278" cy="283" r="4" fill="#9C9690" opacity="0.6"/><circle cx="302" cy="281" r="4" fill="#9C9690" opacity="0.6"/>
+  <circle cx="340" cy="280" r="4" fill="#9C9690" opacity="0.6"/><circle cx="378" cy="281" r="4" fill="#9C9690" opacity="0.6"/>
+  <circle cx="402" cy="283" r="4" fill="#9C9690" opacity="0.6"/><circle cx="426" cy="286" r="4" fill="#9C9690" opacity="0.6"/>
+  <circle cx="449" cy="291" r="4" fill="#9C9690" opacity="0.6"/><circle cx="472" cy="298" r="4" fill="#9C9690" opacity="0.6"/>
+  <circle cx="493" cy="306" r="4" fill="#9C9690" opacity="0.6"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle" x="92" y="306" dominant-baseline="central">B</text>
+
+  <!-- ── RANGÉE C ── -->
+  <ellipse cx="340" cy="268" rx="178" ry="26" fill="none" stroke="#C5BFB5" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="164" cy="270" r="3.5" fill="#9C9690" opacity="0.5"/><circle cx="185" cy="260" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <circle cx="209" cy="251" r="3.5" fill="#9C9690" opacity="0.5"/><circle cx="234" cy="245" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <circle cx="260" cy="241" r="3.5" fill="#9C9690" opacity="0.5"/><circle cx="286" cy="239" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <circle cx="340" cy="238" r="3.5" fill="#9C9690" opacity="0.5"/><circle cx="394" cy="239" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <circle cx="420" cy="241" r="3.5" fill="#9C9690" opacity="0.5"/><circle cx="446" cy="245" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <circle cx="471" cy="251" r="3.5" fill="#9C9690" opacity="0.5"/><circle cx="495" cy="260" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <circle cx="516" cy="270" r="3.5" fill="#9C9690" opacity="0.5"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle" x="92" y="268" dominant-baseline="central">C</text>
+
+  <!-- ── RANGÉE D ── -->
+  <ellipse cx="340" cy="228" rx="200" ry="28" fill="none" stroke="#C5BFB5" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="142" cy="231" r="3" fill="#9C9690" opacity="0.4"/><circle cx="163" cy="219" r="3" fill="#9C9690" opacity="0.4"/>
+  <circle cx="188" cy="209" r="3" fill="#9C9690" opacity="0.4"/><circle cx="215" cy="202" r="3" fill="#9C9690" opacity="0.4"/>
+  <circle cx="243" cy="198" r="3" fill="#9C9690" opacity="0.4"/><circle cx="271" cy="195" r="3" fill="#9C9690" opacity="0.4"/>
+  <circle cx="340" cy="194" r="3" fill="#9C9690" opacity="0.4"/><circle cx="409" cy="195" r="3" fill="#9C9690" opacity="0.4"/>
+  <circle cx="437" cy="198" r="3" fill="#9C9690" opacity="0.4"/><circle cx="465" cy="202" r="3" fill="#9C9690" opacity="0.4"/>
+  <circle cx="492" cy="209" r="3" fill="#9C9690" opacity="0.4"/><circle cx="517" cy="219" r="3" fill="#9C9690" opacity="0.4"/>
+  <circle cx="538" cy="231" r="3" fill="#9C9690" opacity="0.4"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle" x="92" y="228" dominant-baseline="central">D</text>
+
+  <!-- ── BALCON ── -->
+  <rect x="110" y="50" width="460" height="60" rx="10" fill="#E0D9CF" stroke="#C5BFB5" stroke-width="0.8"/>
+  <text font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#2A2D34" text-anchor="middle" x="340" y="80" dominant-baseline="central">Balcon</text>
+  <circle cx="150" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="173" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="196" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="219" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="242" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="265" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="288" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="311" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="340" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="369" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="392" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="415" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="438" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="461" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="484" cy="78" r="3" fill="#9C9690" opacity="0.5"/><circle cx="507" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+  <circle cx="530" cy="78" r="3" fill="#9C9690" opacity="0.5"/>
+
+  <!-- ── RÉGIE ── -->
+  <rect x="490" y="130" width="96" height="46" rx="6" fill="#E0D9CF" stroke="#C5BFB5" stroke-width="0.8"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#2A2D34" text-anchor="middle" x="538" y="149" dominant-baseline="central">Régie</text>
+  <text font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle" x="538" y="164" dominant-baseline="central">son / lumière</text>
+
+  <!-- ── ZONES PMR ── -->
+  <rect x="95" y="345" width="54" height="38" rx="4" fill="#6B1D3A" fill-opacity="0.1" stroke="#6B1D3A" stroke-width="1" stroke-dasharray="4 2"/>
+  <text font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6B1D3A" text-anchor="middle" x="122" y="365" dominant-baseline="central">PMR</text>
+
+  <rect x="531" y="345" width="54" height="38" rx="4" fill="#6B1D3A" fill-opacity="0.1" stroke="#6B1D3A" stroke-width="1" stroke-dasharray="4 2"/>
+  <text font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6B1D3A" text-anchor="middle" x="558" y="365" dominant-baseline="central">PMR</text>
+
+  <!-- ── ENTRÉE ── -->
+  <rect x="300" y="460" width="80" height="26" rx="4" fill="#E0D9CF" stroke="#C5BFB5" stroke-width="0.8"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#2A2D34" text-anchor="middle" x="340" y="473" dominant-baseline="central">Entrée</text>
+
+  <!-- ── LÉGENDE ── -->
+  <circle cx="106" cy="155" r="5" fill="#D4A843"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#2A2D34" x="118" y="159" dominant-baseline="central">Rangée A — orchestre</text>
+
+  <circle cx="106" cy="175" r="4" fill="#9C9690" opacity="0.6"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#2A2D34" x="118" y="179" dominant-baseline="central">Rangées B – D</text>
+
+  <rect x="101" y="190" width="10" height="9" rx="2" fill="#6B1D3A" fill-opacity="0.12" stroke="#6B1D3A" stroke-width="1" stroke-dasharray="3 2"/>
+  <text font-family="Arial, sans-serif" font-size="11" fill="#2A2D34" x="118" y="199" dominant-baseline="central">Zone PMR</text>
+
+  <!-- ── CAPACITÉ ── -->
+  <text font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle" x="340" y="498">Capacité totale — 250 places</text>
+
+</svg>
