@@ -2,14 +2,13 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 128px;
+  padding: 10px 128px;
   & a {
     color: var(--color-light);
     font-weight: 300;
   }
   & a:hover {
     color: var(--color-accent);
-    font-weight: 400;
   }
   /* LOGO */
   & img {
@@ -22,14 +21,14 @@
   &__navbar {
     &-links-wrapper {
       justify-content: space-between;
-      gap: 40px;
+      gap: 20px;
     }
     &-link {
       width: fit-content;
     }
     &-link:not(:first-child) {
       border-left: 0.5px var(--color-accent) solid;
-      padding-left: 40px;
+      padding-left: 20px;
       @media (max-width: 768px) {
         border-left: 0;
         padding-left: 0;

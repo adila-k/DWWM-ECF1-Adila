@@ -51,25 +51,6 @@
     align-items: center;
     gap: 30px;
   }
-  /* CTA BUTTON */
-}
-
-.btn-cta {
-  padding: 20px 50px;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  border: none;
-  font-weight: 300;
-  transition: all 0.5s ease;
-}
-
-.primary {
-  background-color: var(--color-accent);
-}
-.primary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  cursor: pointer;
 }
 
 hr {
