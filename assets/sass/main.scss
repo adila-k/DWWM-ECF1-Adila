@@ -40,3 +40,18 @@ body {
   font-size: 1.8rem;
   background-color: var(--color-light);
 }
+
+/* TITLE */
+h1,
+h2,
+h3 {
+  font-family: "Abril";
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  font-weight: 300;
+}
