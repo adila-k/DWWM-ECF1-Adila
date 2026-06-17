@@ -1,13 +1,90 @@
 .useful-informations {
-  &__card {
-    &-item {
-      padding: 20px 20px;
-      color: var(--color-dark);
-      background-color: var(--color-light);
-      flex: 1;
-      justify-content: space-between;
-      gap: 30px;
-      border: 0.5px solid var(--color-dark);
+  padding: 80px 128px;
+  gap: 100px;
+  &--accent-card {
+    border: 0.5px solid var(--color-dark);
+    padding: 15px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    & span {
+      color: var(--color-accent);
     }
   }
+  &__header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
+  justify-content: space-between;
+  & .section-summary {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+  }
+  & section {
+    padding: 40px 0px;
+  }
+  &__card {
+    &-wrapper {
+      gap: 30px;
+      justify-content: center;
+    }
+    &-item {
+      padding: 15px;
+      color: var(--color-dark);
+      background-color: var(--color-light);
+      width: 300px;
+      justify-content: flex-start;
+      gap: 20px;
+      border: 0.5px solid var(--color-primary);
+      font-size: 1.6rem;
+    }
+  }
+  &-nav-menu {
+    width: 400px;
+  }
+  &__content-container {
+    flex-basis: 1000px;
+    & section {
+      gap: 30px;
+    }
+    & section:nth-child(even) {
+      border-top: 1px solid var(--color-dark);
+      border-bottom: 1px solid var(--color-dark);
+    }
+    & .subtitle {
+      color: var(--color-accent);
+    }
+  }
+  &__menu {
+    &-links-wrapper {
+      width: 400px;
+      margin-top: 20px;
+      gap: 20px;
+      & a:hover {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+    }
+    &-link-item {
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-dark);
+      padding: 5px 5px;
+    }
+  }
+  /* HOW TO COME */
+  &__card-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 2rem;
+}
+
+.card-title {
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--color-primary);
 }
