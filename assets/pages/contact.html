@@ -14,6 +14,152 @@
     -->
     <div id="header"></div>
 
+    <main class="contact">
+      <h1>Contactez-nous</h1>
+      <div class="contact__subtitle">
+        <div>
+          <h3>Une question ?</h3>
+          <p>On est là.</p>
+        </div>
+        <p>
+          Notre équipe vous répond dans les meilleurs délais. Vous pouvez aussi
+          consulter notre <a href="#">FAQ</a> avant d'écrire.
+        </p>
+      </div>
+      <div class="contact__full-content-container flex-row">
+        <section class="contact__infos">
+          <!-- 
+          ==============================
+          ======= INFOS CONTAINER ====== 
+          ==============================
+            -->
+          <div class="contact__infos-container flex-col">
+            <div class="contact__infos-general flex-col">
+              <h4>Le Phosphore</h4>
+              <hr />
+
+              <div>
+                <p class="contact__infos-label">Adresse</p>
+                <p>12 rue des Beaux-Arts <br />33000 Bordeaux</p>
+              </div>
+              <div>
+                <p class="contact__infos-label">Téléphone</p>
+                <p>05 56 XX XX XX</p>
+              </div>
+              <div>
+                <p class="contact__infos-label">E-mail</p>
+                <p>contact@lephosphore.fr</p>
+              </div>
+              <div>
+                <p class="contact__infos-label">Ouverture des portes</p>
+                <p>45 min avant chaque représentation</p>
+              </div>
+
+              <hr />
+              <div>
+                <p>Vous couvrez un spectacle ?</p>
+                <a href="">Faire une demande d'accréditation →</a>
+              </div>
+            </div>
+            <iframe
+              src="https://maps.google.com/maps?q=Bordeaux&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="450"
+              style="
+                border: 0;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+              "
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </section>
+        <!-- 
+          ===================
+          ======= FORM ====== 
+          ===================
+            -->
+        <section class="contact__form flex-col">
+          <div class="contact__form-title">
+            <h2>Écrivez-nous</h2>
+            <p>Tous les champs marqués d'un * sont obligatoires.</p>
+          </div>
+          <form action="" class="flex-col">
+            <div class="contact__form-pairs flex-row">
+              <div class="contact__form-item flex-col">
+                <label for="name">Nom</label
+                ><input
+                  id="name"
+                  type="text"
+                  required
+                  placeholder="Your name"
+                />
+              </div>
+              <div class="contact__form-item flex-col">
+                <label for="surname">Prénom</label
+                ><input id="surname" type="text" required />
+              </div>
+            </div>
+            <div class="contact__form-pairs flex-row">
+              <div class="contact__form-item flex-col">
+                <label for="email">Email</label
+                ><input id="email" type="text" required />
+              </div>
+              <div class="contact__form-item flex-col">
+                <label for="phone">Téléphone</label
+                ><input id="phone" type="text" />
+              </div>
+            </div>
+            <div class="contact__form-pairs flex-row">
+              <div class="contact__form-item flex-col">
+                <label for="">Organisme</label><input id="" type="text" />
+              </div>
+              <div class="contact__form-item flex-col">
+                <label for="role">Fonction</label
+                ><input id="role" type="text" />
+              </div>
+            </div>
+
+            <div class="contact__form-item flex-col">
+              <label for="subject" required>Objet de votre demande</label
+              ><select name="subject" id="subject" required>
+                <option value="tickets">Billetterie & réservations</option>
+                <option value="shows">Programmation</option>
+                <option value="">Objets perdus</option>
+                <option value="">Demande d'accréditation presse / photo</option>
+                <option value="rent">Location de la salle</option>
+                <option value="job">Candidature spontanée</option>
+                <option value="Other">Autre</option>
+              </select>
+            </div>
+            <div class="contact__form-item flex-col">
+              <label for="message">Message</label
+              ><textarea name="message" id="message" required></textarea>
+            </div>
+          </form>
+          <div class="contact__form-consent-btn flex-col">
+            <div class="contact__form-consent flex-row">
+              <input type="checkbox" />
+              <p>
+                S'inscrire à la newsletter du Phosphore — spectacles, événements
+                et avant-premières.
+              </p>
+            </div>
+            <hr />
+            <p>
+              En envoyant ce formulaire, vous acceptez que les informations
+              saisies soient utilisées pour traiter votre demande. Conformément
+              à la loi Informatique et Libertés, vous disposez d'un droit
+              d'accès, de rectification et de suppression de vos données.
+              Consultez notre <a href="#">politique de confidentialité</a>.
+            </p>
+            <button class="btn-cta btn-cta-secondary">Envoyer</button>
+          </div>
+        </section>
+      </div>
+    </main>
     <!-- 
       ==================
       ===== FOOTER ===== 

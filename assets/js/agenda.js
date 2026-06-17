@@ -5,6 +5,9 @@ const shows = data.spectacles;
 // I get the html element
 const showsContainer = document.querySelector(".agenda-grid");
 
+let index = 0;
+let currentRow;
+
 // A card = img (img) + schedule (p) + artist name (h3) + show name (p)
 shows.forEach((show) => {
   const card = document.createElement("div");
@@ -41,4 +44,25 @@ shows.forEach((show) => {
   card.appendChild(artistShowInfo);
 
   showsContainer.appendChild(card);
+
+  if (index % 3 === 0) {
+    const newRow = document.createElement("div");
+    newRow.classList.add("row, px-0");
+
+    const newCol = document.createElement("div");
+    newCol.classList.add("col-md-4");
+
+    newCol.appendChild(card);
+    newRow.appendChild(newCol);
+
+    showsContainer.appendChild(newRow);
+
+    currentRow = newRow;
+  } else {
+    const newCol = document.createElement("div");
+    newCol.classList.add("col-md-4");
+    newCol.appendChild(card);
+    currentRow.appendChild(newCol);
+  }
+  index++;
 });

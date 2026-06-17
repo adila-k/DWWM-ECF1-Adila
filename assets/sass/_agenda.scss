@@ -1,0 +1,7 @@
+.picture-hover {
+  opacity: 0;
+  pointer-events: none;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

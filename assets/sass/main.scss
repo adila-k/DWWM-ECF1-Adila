@@ -23,6 +23,28 @@
   --color-accent: #d4a843;
   --color-light: #f5f0e8;
   --color-primary: #6b1d3a;
+  --color-success: #207008;
+}
+
+/* MIXINS */
+
+@mixin label($label-type) {
+  // depends on remaining slots
+  border-radius: 4px;
+  padding: 4px 10px;
+  color: var(--color-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  @if $label-type == "full" {
+    background-color: var(--color-primary);
+  }
+  @if $label-type == "available" {
+    background-color: var(--color-success);
+  }
+  @if $label-type == "soon" {
+    background-color: var(--color-accent);
+  }
 }
 
 /* OVERALL */
@@ -42,15 +64,22 @@ body {
   background-color: var(--color-light);
 }
 
+section {
+  padding: 80px 128px;
+}
 /* TITLE */
 h1,
 h2,
 h3 {
   font-family: "Abril";
 }
+h1 {
+  font-size: 6.4rem;
+}
 
-h3 {
-  font-size: 2.4rem;
+h2 {
+  font-size: 2.6rem;
+  letter-spacing: 1px;
 }
 
 h4 {
@@ -87,11 +116,11 @@ footer {
 
 .flex-row {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
 }
 .flex-col {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
 }
 
 /* CTA BUTTON */
@@ -103,13 +132,52 @@ footer {
   border: none;
   font-weight: 300;
   transition: all 0.5s ease;
+
+  &-primary {
+    background-color: var(--color-accent);
+  }
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    cursor: pointer;
+  }
+  &-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
 }
 
-.primary {
-  background-color: var(--color-accent);
+.upcoming-shows__label-remaining-slots {
+  @include label(full);
 }
-.primary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  cursor: pointer;
+
+/***********************/
+/**** PICTURE HOVER ****/
+/***********************/
+
+.picture-hover {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.403);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  & .more-icon {
+    height: 50px;
+    width: 50px;
+  }
+  &.active {
+    opacity: 1;
+  }
+  /************************************/
+  /*********** Hover effect ***********/
+  /************************************/
+  &:hover {
+    opacity: 1;
+  }
 }

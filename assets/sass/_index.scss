@@ -8,8 +8,10 @@
 }
 
 .hero {
+  padding: 0;
   flex: 1;
   position: relative;
+  align-items: center;
   &__curtains {
     height: 100%;
     width: 100%;
@@ -30,6 +32,47 @@
     width: 470px;
     & h4 {
       align-self: flex-end;
+    }
+  }
+}
+
+.plan-your-visit {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-size: 1.6rem;
+  gap: 80px;
+  & button {
+    width: fit-content;
+    align-self: center;
+  }
+  &__card-btn {
+    gap: 30px;
+  }
+  &__card {
+    height: 100%;
+    transition: all 0.4s ease;
+    @media (max-width: 768px) {
+      height: 250px;
+      width: 100%;
+    }
+    &-title {
+      gap: 10px;
+      text-transform: uppercase;
+    }
+    &-wrapper {
+      gap: 50px;
+    }
+    &-item {
+      border-radius: 4px;
+      padding: 20px 20px;
+      color: var(--color-dark);
+      background-color: var(--color-light);
+      flex: 1;
+      justify-content: space-between;
+      gap: 30px;
+      & img {
+        height: 20px;
+      }
     }
   }
 }

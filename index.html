@@ -21,7 +21,7 @@
       ====== HERO ====== 
       ==================
     -->
-      <section class="hero">
+      <section class="hero flex-col">
         <div class="hero__curtains flex-row">
           <img src="assets/img/left-curtain.svg" alt="" /><img
             src="assets/img/right-curtain.svg"
@@ -55,20 +55,131 @@
       ====== UPCOMING SHOWS ====== 
       ============================
     -->
-      <section class="upcoming-shows"></section>
+      <section class="upcoming-shows">
+        <div class="upcoming-shows__content-container">
+          <h2>Nos prochaines dates</h2>
+          <div class="upcoming-shows-card-wrapper">
+            <!-- CARD 1 -->
+            <div class="upcoming-shows__card">
+              <!------------------------------------------->
+              <!-- DIV FOR HOVER AND LINK TO THE PROJECT -->
+              <!------------------------------------------->
+              <a href="#" class="projects-highlights__carousel-project-link"
+                ><div class="picture-hover">
+                  <img
+                    src="assets/img/icons/hover-more-icon.png"
+                    alt="-"
+                    class="more-icon"
+                    loading="lazy"
+                  /></div
+              ></a>
+              <!-- Text content container -->
+              <div class="upcoming-shows__content-container flex-row">
+                <div class="upcoming-shows__card-schedule flex-row">
+                  <p>2026-06-22</p>
+                  <p>•</p>
+                  <p>20:30</p>
+                </div>
+                <p class="upcoming-shows__label-remaining-slots">full</p>
+                <div class="upcoming-shows__card-artistShowInfo">
+                  <div class="upcoming-shows__card-artistName">
+                    Ahmed Music Quartet
+                  </div>
+                  <div class="upcoming-shows__card-showName">
+                    Ahmed Music - Jazz Manouche
+                  </div>
+                </div>
+              </div>
+              <!-- Show's picture -->
+              <img src="/assets/img/shows/ahmed-music.jpg" alt="" />
+            </div>
+            <div class="upcoming-shows__card">
+              <!------------------------------------------->
+              <!-- DIV FOR HOVER AND LINK TO THE PROJECT -->
+              <!------------------------------------------->
+              <a href="#" class="projects-highlights__carousel-project-link"
+                ><div class="picture-hover">
+                  <img
+                    src="assets/img/icons/hover-more-icon.png"
+                    alt="-"
+                    class="more-icon"
+                    loading="lazy"
+                  /></div
+              ></a>
+              <!-- Text content container -->
+              <div class="upcoming-shows__content-container flex-row">
+                <div class="upcoming-shows__card-schedule flex-row">
+                  <p>2026-06-22</p>
+                  <p>•</p>
+                  <p>20:30</p>
+                </div>
+                <p class="upcoming-shows__label-remaining-slots">full</p>
+                <div class="upcoming-shows__card-artistShowInfo">
+                  <div class="upcoming-shows__card-artistName">
+                    Ahmed Music Quartet
+                  </div>
+                  <div class="upcoming-shows__card-showName">
+                    Ahmed Music - Jazz Manouche
+                  </div>
+                </div>
+              </div>
+              <!-- Show's picture -->
+              <img src="/assets/img/shows/ahmed-music.jpg" alt="" />
+            </div>
+            <div class="upcoming-shows__card">
+              <!------------------------------------------->
+              <!-- DIV FOR HOVER AND LINK TO THE PROJECT -->
+              <!------------------------------------------->
+              <a href="#" class="projects-highlights__carousel-project-link"
+                ><div class="picture-hover">
+                  <img
+                    src="assets/img/icons/hover-more-icon.png"
+                    alt="-"
+                    class="more-icon"
+                    loading="lazy"
+                  /></div
+              ></a>
+              <!-- Text content container -->
+              <div class="upcoming-shows__content-container flex-row">
+                <div class="upcoming-shows__card-schedule flex-row">
+                  <p>2026-06-22</p>
+                  <p>•</p>
+                  <p>20:30</p>
+                </div>
+                <p class="upcoming-shows__label-remaining-slots">full</p>
+                <div class="upcoming-shows__card-artistShowInfo">
+                  <div class="upcoming-shows__card-artistName">
+                    Ahmed Music Quartet
+                  </div>
+                  <div class="upcoming-shows__card-showName">
+                    Ahmed Music - Jazz Manouche
+                  </div>
+                </div>
+              </div>
+              <!-- Show's picture -->
+              <img src="/assets/img/shows/ahmed-music.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <a href="/assets/pages/agenda.html"
+          ><button class="btn-cta btn-cta-primary">Voir l'agenda</button></a
+        >
+      </section>
       <!-- 
       =============================
       ====== PLAN YOUR VISIT ====== 
       =============================
     -->
-      <section class="plan-your-visit">
+      <section class="plan-your-visit flex-col">
         <h2>Préparez votre visite</h2>
-        <div class="plan-your-visit__cards-btn">
-          <div class="plan-your-visit__cards-wrapper">
+        <div class="plan-your-visit__card-btn">
+          <div class="plan-your-visit__card-wrapper flex-row">
             <!-- ==== CARD 1 ==== -->
-            <div class="plan-your-visit__cards-item">
-              <div>
-                <img src="" alt="" />
+            <div class="plan-your-visit__card-item flex-col">
+              <div class="plan-your-visit__card-title flex-row">
+                <img src="/assets/img/icons/seat-icon.svg" alt="" />
                 <p>Trouver votre place</p>
               </div>
               <p>
@@ -82,9 +193,9 @@
               </div>
             </div>
             <!-- ==== CARD 2 ==== -->
-            <div class="plan-your-visit__cards-item">
-              <div>
-                <img src="" alt="" />
+            <div class="plan-your-visit__card-item flex-col">
+              <div class="plan-your-visit__card-title flex-row">
+                <img src="/assets/img/icons/dinner-icon.svg" alt="" />
                 <p>Boire & manger</p>
               </div>
               <p>
@@ -98,9 +209,9 @@
               </div>
             </div>
             <!-- ==== CARD 3 ==== -->
-            <div class="plan-your-visit__cards-item">
-              <div>
-                <img src="" alt="" />
+            <div class="plan-your-visit__card-item flex-col">
+              <div class="plan-your-visit__card-title flex-row">
+                <img src="/assets/img/icons/location-icon.svg" alt="" />
                 <p>Préparer votre venue</p>
               </div>
               <p>
@@ -113,9 +224,9 @@
               </div>
             </div>
             <!-- ==== CARD 4 ==== -->
-            <div class="plan-your-visit__cards-item">
-              <div>
-                <img src="" alt="" />
+            <div class="plan-your-visit__card-item flex-col">
+              <div class="plan-your-visit__card-title flex-row">
+                <img src="/assets/img/icons/pmr-icon.svg" alt="" />
                 <p>Accessibilité PMR/PSH</p>
               </div>
               <p>
@@ -128,10 +239,10 @@
               </div>
             </div>
           </div>
-          <button class="plan-your-visit__button">
-            Voir l'ensemble de nos services
-          </button>
         </div>
+        <button class="plan-your-visit__button btn-cta btn-cta-primary">
+          Voir l'ensemble de nos services
+        </button>
       </section>
     </main>
 
