@@ -10,10 +10,6 @@
       color: var(--color-accent);
     }
   }
-  &__header {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-  }
   justify-content: space-between;
   & .section-summary {
     font-size: 1.6rem;
@@ -75,12 +71,6 @@
   &__card-wrapper {
     flex-wrap: wrap;
   }
-}
-
-.subtitle {
-  text-transform: uppercase;
-  font-weight: 300;
-  font-family: 2rem;
 }
 
 .card-title {
