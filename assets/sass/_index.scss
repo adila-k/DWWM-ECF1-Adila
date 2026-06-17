@@ -26,6 +26,12 @@
     position: relative;
     width: 100%;
     height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 300px;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
   &__title {
     gap: 30px;
@@ -33,9 +39,24 @@
     & h4 {
       align-self: flex-end;
     }
+    p {
+      color: var(--color-light);
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      font-weight: 200;
+    }
+  }
+  &__cta-center {
+    align-items: center;
+    gap: 60px;
   }
 }
 
+/* 
+===================
+= PLAN YOUR VISIT =
+===================
+*/
 .plan-your-visit {
   background-color: var(--color-primary);
   color: var(--color-light);
@@ -63,7 +84,6 @@
       gap: 50px;
     }
     &-item {
-      border-radius: 4px;
       padding: 20px 20px;
       color: var(--color-dark);
       background-color: var(--color-light);
