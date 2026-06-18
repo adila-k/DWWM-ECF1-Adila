@@ -1,3 +1,8 @@
+/* 
+============
+= HOMEPAGE =
+============
+*/
 .homepage-wrapper {
   height: 100dvh;
   background-image: url("/assets/img/hero-background.png");
@@ -36,6 +41,7 @@
   &__title {
     gap: 30px;
     width: 470px;
+
     & h4 {
       align-self: flex-end;
     }
@@ -142,6 +148,10 @@
     }
     &-wrapper {
       gap: 50px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
     }
     &-item {
       padding: 20px 20px;
@@ -150,6 +160,11 @@
       flex: 1;
       justify-content: space-between;
       gap: 30px;
+      @media (max-width: 768px) {
+        flex: none;
+        width: 100%;
+      }
+
       & img {
         height: 20px;
       }

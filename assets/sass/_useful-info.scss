@@ -1,9 +1,12 @@
 .useful-informations {
-  gap: 100px;
   flex-wrap: wrap;
   padding: 0 128px;
+  gap: 120px;
   @media (max-width: 768px) {
     padding: 80px 20px;
+  }
+  & h2 {
+    font-size: 3rem;
   }
   &--accent-card {
     border: 0.5px solid var(--color-dark);
@@ -43,7 +46,8 @@
     width: 400px;
   }
   &__content-container {
-    flex-basis: 1000px;
+    /* flex-basis: 500px; */
+    flex: 1;
     @media (max-width: 768px) {
       width: 100%;
     }
@@ -60,7 +64,7 @@
   }
   &__menu {
     &-links-wrapper {
-      width: 300px;
+      width: 100%;
       margin-top: 20px;
       gap: 20px;
       & a:hover {
