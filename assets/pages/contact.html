@@ -89,7 +89,7 @@
             <h2>Écrivez-nous</h2>
             <p>Tous les champs marqués d'un * sont obligatoires.</p>
           </div>
-          <form action="" class="flex-col">
+          <form action="#" class="flex-col">
             <div class="contact__form-pairs flex-row">
               <div class="contact__form-item flex-col">
                 <label for="name">Nom</label
@@ -117,7 +117,7 @@
             </div>
             <div class="contact__form-pairs flex-row">
               <div class="contact__form-item flex-col">
-                <label for="">Organisme</label><input id="" type="text" />
+                <label for="entity">Organisme</label><input id="" type="text" />
               </div>
               <div class="contact__form-item flex-col">
                 <label for="role">Fonction</label
@@ -126,12 +126,14 @@
             </div>
 
             <div class="contact__form-item flex-col">
-              <label for="subject" required>Objet de votre demande</label
+              <label for="subject">Objet de votre demande</label
               ><select name="subject" id="subject" required>
                 <option value="tickets">Billetterie & réservations</option>
                 <option value="shows">Programmation</option>
                 <option value="">Objets perdus</option>
-                <option value="">Demande d'accréditation presse / photo</option>
+                <option value="press">
+                  Demande d'accréditation presse / photo
+                </option>
                 <option value="rent">Location de la salle</option>
                 <option value="job">Candidature spontanée</option>
                 <option value="Other">Autre</option>

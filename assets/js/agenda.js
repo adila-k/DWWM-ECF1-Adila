@@ -39,6 +39,10 @@ function generateCards(show) {
   const currentProgressionBar = document.createElement("div");
   currentProgressionBar.classList.add("show__current-progression-bar");
 
+  const getTicket = document.createElement("button");
+  getTicket.classList.add("show__buyTicket");
+  getTicket.textContent = "Réservez votre place";
+
   // I compute available slots
   const pourcentage = (show.places_vendues / show.places_total) * 100;
 
@@ -48,6 +52,8 @@ function generateCards(show) {
     showSoldOut.classList.add("show__label", "show__label--full");
     showSoldOut.textContent = "Sold out";
     showPictureWrapper.appendChild(showSoldOut);
+    getTicket.classList.add("show__buyTicket-soldout");
+    getTicket.textContent = "Plus de places disponibles";
   }
 
   fullProgressionBar.appendChild(currentProgressionBar);
@@ -59,8 +65,10 @@ function generateCards(show) {
   card.appendChild(showLink);
   card.appendChild(showDate);
   card.appendChild(fullProgressionBar);
+  card.appendChild(getTicket);
 
   currentProgressionBar.style.width = pourcentage + "%";
+  currentProgressionBar.textContent = Math.round(pourcentage) + "%";
 
   return card;
 }
