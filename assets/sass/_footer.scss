@@ -13,7 +13,6 @@
   & a {
     color: var(--color-light);
     font-size: 1.4rem;
-    text-transform: none;
   }
   & a:hover {
     color: var(--color-accent);
@@ -56,13 +55,18 @@
       gap: 15px;
     }
   }
-  &__legal-notices ul {
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 5px;
+  &__legal-notices {
+    & a {
+      text-transform: none;
+    }
+    & ul {
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 5px;
+      }
     }
   }
 }

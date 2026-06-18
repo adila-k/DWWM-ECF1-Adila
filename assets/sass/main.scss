@@ -136,6 +136,11 @@ footer {
 
 /* CTA BUTTON */
 
+/* Remove text decoration from button */
+a.btn-cta {
+  text-decoration: none;
+}
+
 .btn-cta {
   padding: 20px 50px;
   font-size: 1.6rem;
