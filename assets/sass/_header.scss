@@ -25,6 +25,9 @@
     }
     &-link {
       width: fit-content;
+      & a.active {
+        color: var(--color-accent) !important;
+      }
     }
     &-link:not(:first-child) {
       border-left: 0.5px var(--color-accent) solid;

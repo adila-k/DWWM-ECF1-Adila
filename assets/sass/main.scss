@@ -2,7 +2,6 @@
 @use "agenda";
 @use "useful-info";
 @use "contact";
-@use "show-detail";
 @use "header";
 @use "footer";
 
@@ -39,12 +38,6 @@
   @if $label-type == "full" {
     background-color: var(--color-primary);
   }
-  @if $label-type == "available" {
-    background-color: var(--color-success);
-  }
-  @if $label-type == "soon" {
-    background-color: var(--color-accent);
-  }
 }
 
 /* OVERALL */
@@ -63,6 +56,9 @@ html {
 body {
   font-size: 1.8rem;
   background-color: var(--color-light);
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 }
 
 /* TITLE */
@@ -103,6 +99,9 @@ li {
 
 section {
   padding: 80px 128px;
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
 }
 
 /* LINKS */
@@ -189,4 +188,17 @@ footer {
   text-transform: uppercase;
   font-weight: 300;
   font-family: 2rem;
+}
+
+/* BOOTSTRAP CLASSES */
+.mb-5 {
+  margin-bottom: 48px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.fw-bold {
+  font-weight: 700;
 }
