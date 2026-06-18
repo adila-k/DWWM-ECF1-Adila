@@ -84,6 +84,8 @@ function displayShows(showsList) {
 
       const newCol = document.createElement("div");
       newCol.classList.add("col-md-4");
+      newCol.classList.add("col-xs-6");
+      newCol.classList.add("col-12");
 
       newCol.appendChild(card);
       newRow.appendChild(newCol);
@@ -93,6 +95,8 @@ function displayShows(showsList) {
     } else {
       const newCol = document.createElement("div");
       newCol.classList.add("col-md-4");
+      newCol.classList.add("col-xs-6");
+      newCol.classList.add("col-12");
       newCol.appendChild(card);
       currentRow.appendChild(newCol);
     }

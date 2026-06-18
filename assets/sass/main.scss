@@ -212,9 +212,22 @@ a.btn-cta {
   }
 }
 
+@media (max-width: 575.98px) {
+  .col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
 .px-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-xs-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
 }
 
 .container-fluid {
