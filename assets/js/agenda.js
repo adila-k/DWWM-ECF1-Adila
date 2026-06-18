@@ -28,6 +28,9 @@ shows.forEach((show) => {
   const showLink = document.createElement("a");
   showLink.textContent = show.titre;
 
+  const showDate = document.createElement("p");
+  showDate.textContent = show.date;
+
   const fullProgressionBar = document.createElement("div");
   fullProgressionBar.classList.add("show__full-progression-bar");
   const currentProgressionBar = document.createElement("div");
@@ -54,6 +57,7 @@ shows.forEach((show) => {
   card.appendChild(showPictureWrapper);
   card.appendChild(showArtist);
   card.appendChild(showLink);
+  card.appendChild(showDate);
   card.appendChild(fullProgressionBar);
 
   const progressBar = card.querySelector(".show__current-progression-bar");
