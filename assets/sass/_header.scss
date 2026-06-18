@@ -30,16 +30,17 @@
     @media (max-width: 768px) {
       position: absolute;
       top: 80px;
-      right: 0;
+      right: -20px;
       background-color: var(--color-dark);
       width: 300px;
       height: 400px;
-      z-index: 10000;
+      z-index: 100000;
       transform: translateX(100%);
       transition: transform 0.5s ease-in-out;
       &.is-open {
         @media (max-width: 768px) {
           transform: translateX(0);
+          z-index: 600;
         }
       }
     }
@@ -59,6 +60,12 @@
       width: fit-content;
       & a.active {
         color: var(--color-accent) !important;
+      }
+      &-mobile {
+        display: none;
+        @media (max-width: 768px) {
+          display: block;
+        }
       }
     }
     &-link:not(:first-child) {

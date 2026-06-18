@@ -22,9 +22,18 @@
     width: 100%;
     justify-content: space-between;
     position: absolute;
+    z-index: 200;
     & img {
       height: 100%;
       width: auto;
+    }
+    &__left {
+      transform-origin: left center;
+      animation: curtain-open-left 1.4s ease-in-out forwards;
+    }
+    &__right {
+      transform-origin: right center;
+      animation: curtain-open-right 1.4s ease-in-out forwards;
     }
   }
   &__title-btn-wrapper {
@@ -55,6 +64,24 @@
   &__cta-center {
     align-items: center;
     gap: 60px;
+  }
+}
+
+@keyframes curtain-open-left {
+  from {
+    transform: translateX(85%) scale(4);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes curtain-open-right {
+  from {
+    transform: translateX(-85%) scale(4);
+  }
+  to {
+    transform: translateX(0) scale(1);
   }
 }
 /* 
