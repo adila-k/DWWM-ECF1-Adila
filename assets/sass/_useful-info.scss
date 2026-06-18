@@ -89,3 +89,41 @@
   font-size: 2rem;
   color: var(--color-primary);
 }
+
+.plan__picture {
+  margin: auto;
+}
+
+.plan__picture {
+  margin: auto;
+  position: relative;
+}
+
+/***************/
+/* INFO BULLE  */
+/***************/
+
+[role="tooltip"] {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: var(--color-light);
+  border: 1px var(--color-accent) solid;
+  color: var(--color-dark);
+  padding: 20px;
+  border-radius: 0.25rem;
+  transition:
+    visibility 0.5s,
+    opacity 0.5s;
+  pointer-events: none;
+}
+
+[aria-describedby]:hover + [role="tooltip"],
+[aria-describedby]:focus + [role="tooltip"],
+[role="tooltip"]:hover,
+[role="tooltip"]:focus {
+  visibility: visible;
+  opacity: 1;
+}

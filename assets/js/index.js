@@ -1,9 +1,9 @@
-fetch("../spectacles.json")
+fetch("assets/spectacles.json")
   .then((response) => response.json())
   .then((data) => {
     const shows = data.spectacles;
 
-    // On récupère les 3 cartes présentes dans le HTML
+    /// Get all cards from the HTML page
     const cards = document.querySelectorAll(".upcoming-shows__card-item");
 
     // Create a table to store random indexes

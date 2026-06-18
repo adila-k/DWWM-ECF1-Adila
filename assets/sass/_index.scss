@@ -120,6 +120,7 @@
 
 .upcoming-shows {
   gap: 50px;
+  width: 100%;
   &__card {
     &__link {
       display: block;
@@ -137,17 +138,23 @@
       padding: 20px;
       height: 100%;
       position: relative;
+      width: 100%;
     }
     &-item {
       color: var(--color-light);
+      width: 300px;
     }
     &-wrapper {
       height: 500px;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      width: 100%;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      position: relative;
     }
     &-item {
       height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     &-top-info {
