@@ -5,7 +5,7 @@
 */
 .homepage-wrapper {
   height: 100dvh;
-  background-image: url("/assets/img/hero-background.png");
+  background-image: url("/assets/img/hero-background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,6 +17,11 @@
   flex: 1;
   position: relative;
   align-items: center;
+  &__brand-logo {
+    @media (max-width: 768px) {
+      width: 300px;
+    }
+  }
   &__curtains {
     height: 100%;
     width: 100%;
@@ -34,6 +39,14 @@
     &__right {
       transform-origin: right center;
       animation: curtain-open-right 1.4s ease-in-out forwards;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  &__title-logo-wrapper {
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
   &__title-btn-wrapper {
@@ -45,14 +58,26 @@
     padding-left: 300px;
     @media (max-width: 768px) {
       padding: 0;
+      z-index: 800;
+      padding-left: 0;
     }
   }
   &__title {
     gap: 30px;
     width: 470px;
-
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+    & p {
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
     & h4 {
       align-self: flex-end;
+      @media (max-width: 768px) {
+        align-items: normal;
+      }
     }
     p {
       color: var(--color-light);
@@ -64,6 +89,9 @@
   &__cta-center {
     align-items: center;
     gap: 60px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 

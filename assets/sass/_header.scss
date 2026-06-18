@@ -40,7 +40,7 @@
       &.is-open {
         @media (max-width: 768px) {
           transform: translateX(0);
-          z-index: 600;
+          z-index: 61000;
         }
       }
     }

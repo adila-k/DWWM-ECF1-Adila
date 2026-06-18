@@ -1,20 +1,23 @@
-const windowWidth = window.innerWidth;
-
 const response = await fetch("/assets/spectacles.json");
 const data = await response.json();
 const shows = data.spectacles;
 
 const cardsContainer = document.querySelector(".agenda-grid");
+const filtersTypeContainer = document.querySelector(".filter-type");
+const filtersDaysContainer = document.querySelector(".filter-day");
 
-// Index to track where to create a new bootstrap row
-let index = 0;
-let currentRow;
+// I need filters to be empty before using filters
+let filtersActive = {
+  type: null,
+  jour: null,
+};
 
-shows.forEach((show) => {
-  // Create a card
+// I create a function to generate cards from JSON
+
+function generateCards(show) {
   const card = document.createElement("div");
   card.classList.add("show__card");
-  // Create elements of a card and set classes if needed
+
   const showPictureWrapper = document.createElement("div");
   showPictureWrapper.classList.add("show__picture");
   const showImage = document.createElement("img");
@@ -36,23 +39,20 @@ shows.forEach((show) => {
   const currentProgressionBar = document.createElement("div");
   currentProgressionBar.classList.add("show__current-progression-bar");
 
-  // Compute current available slots
-
+  // I compute available slots
   const pourcentage = (show.places_vendues / show.places_total) * 100;
 
-  // If there are no more tickets available
+  // If no more slots are available, the sold out label will be displayed
   if (pourcentage === 100) {
     const showSoldOut = document.createElement("p");
     showSoldOut.classList.add("show__label", "show__label--full");
     showSoldOut.textContent = "Sold out";
     showPictureWrapper.appendChild(showSoldOut);
   }
+
   fullProgressionBar.appendChild(currentProgressionBar);
 
-  // Link everything together
-
   showPictureWrapper.appendChild(showImage);
-  showPictureWrapper.appendChild(showLink);
 
   card.appendChild(showPictureWrapper);
   card.appendChild(showArtist);
@@ -60,30 +60,155 @@ shows.forEach((show) => {
   card.appendChild(showDate);
   card.appendChild(fullProgressionBar);
 
-  const progressBar = card.querySelector(".show__current-progression-bar");
-  progressBar.style.width = pourcentage + "%";
+  currentProgressionBar.style.width = pourcentage + "%";
 
-  if (index % 3 === 0) {
-    const newRow = document.createElement("div");
-    newRow.classList.add("row");
-    newRow.classList.add("gx-5");
-    newRow.classList.add("px-0");
+  return card;
+}
 
-    const newCol = document.createElement("div");
-    newCol.classList.add("col-md-4");
+////////////////
+// SHOWS GRID //
+///////////////
 
-    newCol.appendChild(card);
-    newRow.appendChild(newCol);
+function displayShows(showsList) {
+  cardsContainer.innerHTML = "";
 
-    cardsContainer.appendChild(newRow);
+  let index = 0;
+  let currentRow;
 
+  showsList.forEach((show) => {
+    const card = generateCards(show);
+
+    if (index % 3 === 0) {
+      const newRow = document.createElement("div");
+      newRow.classList.add("row", "gx-5", "px-0");
+
+      const newCol = document.createElement("div");
+      newCol.classList.add("col-md-4");
+
+      newCol.appendChild(card);
+      newRow.appendChild(newCol);
+
+      cardsContainer.appendChild(newRow);
+      currentRow = newRow;
+    } else {
+      const newCol = document.createElement("div");
+      newCol.classList.add("col-md-4");
+      newCol.appendChild(card);
+      currentRow.appendChild(newCol);
+    }
     index++;
-    currentRow = newRow;
-  } else {
-    const newCol = document.createElement("div");
-    newCol.classList.add("col-md-4");
-    newCol.appendChild(card);
-    currentRow.appendChild(newCol);
-    index++;
-  }
-});
+  });
+}
+
+//////////////////
+// FILTER SHOWS //
+//////////////////
+
+function filterShows() {
+  const result = shows.filter((show) => {
+    const matchType = !filtersActive.type || show.type === filtersActive.type;
+    const matchDay = !filtersActive.jour || show.date === filtersActive.jour;
+    return matchType && matchDay;
+  });
+
+  displayShows(result);
+}
+
+/////////////////
+// FILTER TYPE //
+/////////////////
+
+function createTypeButton() {
+  const typeItem = [...new Set(shows.map((show) => show.type))];
+
+  const allButtons = document.createElement("button");
+  allButtons.textContent = "Tous";
+  allButtons.classList.add("filter-btn", "active");
+  allButtons.addEventListener("click", () => {
+    filtersActive.type = null;
+    updateActiveBtn(filtersTypeContainer, allButtons);
+    filterShows();
+  });
+  filtersTypeContainer.appendChild(allButtons);
+
+  typeItem.forEach((type) => {
+    const button = document.createElement("button");
+    button.textContent = type;
+    button.classList.add("filter-btn");
+
+    button.addEventListener("click", () => {
+      filtersActive.type = type;
+      updateActiveBtn(filtersTypeContainer, button);
+      filterShows();
+    });
+
+    filtersTypeContainer.appendChild(button);
+  });
+}
+
+//////////////////////
+// FILTER DAY - BTN //
+//////////////////////
+
+const monthsNames = {
+  "01": "janv.",
+  "02": "févr.",
+  "03": "mars",
+  "04": "avr.",
+  "05": "mai",
+  "06": "juin",
+  "07": "juil.",
+  "08": "août",
+  "09": "sept.",
+  10: "oct.",
+  11: "nov.",
+  12: "déc.",
+};
+
+function getFullDate(dateISO) {
+  const [year, month, day] = dateISO.split("-");
+  return `${day} ${monthsNames[month]}`;
+}
+
+function createDayButton() {
+  const dayItem = [...new Set(shows.map((show) => show.date))].sort();
+
+  const allButtons = document.createElement("button");
+  allButtons.textContent = "Tous";
+  allButtons.classList.add("filter-btn", "active");
+  allButtons.addEventListener("click", () => {
+    filtersActive.jour = null;
+    updateActiveBtn(filtersDaysContainer, allButtons);
+    filterShows();
+  });
+  filtersDaysContainer.appendChild(allButtons);
+
+  dayItem.forEach((jourISO) => {
+    const button = document.createElement("button");
+    button.textContent = getFullDate(jourISO);
+    button.classList.add("filter-btn");
+
+    button.addEventListener("click", () => {
+      filtersActive.jour = jourISO;
+      updateActiveBtn(filtersDaysContainer, button);
+      filterShows();
+    });
+
+    filtersDaysContainer.appendChild(button);
+  });
+}
+
+///////////////////////////////
+// GET THE ACTIVE BTN STYLED //
+//////////////////////////////
+
+function updateActiveBtn(container, selectedBtn) {
+  container
+    .querySelectorAll(".filter-btn")
+    .forEach((btn) => btn.classList.remove("active"));
+  selectedBtn.classList.add("active");
+}
+
+createTypeButton();
+createDayButton();
+displayShows(shows);
