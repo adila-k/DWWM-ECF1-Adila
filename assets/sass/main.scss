@@ -196,6 +196,35 @@ a.btn-cta {
 }
 
 /* BOOTSTRAP CLASSES */
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* To get cards aligned side by side */
+}
+
+.col-md-4 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    width: 33.33%;
+  }
+}
+
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.gx-5 {
+  --bs-gutter-x: 3rem;
+}
+
 .mb-5 {
   margin-bottom: 48px;
 }
